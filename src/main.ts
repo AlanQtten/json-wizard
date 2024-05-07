@@ -61,6 +61,24 @@ function deepSet(obj: object, key: string, value: any) {
   return _obj;
 }
 
+function deepDelete(obj: object, key: string) {
+  const keyPath = key.split('.');
+  const _obj = cloneDeep(obj);
+
+  let _ticker = _obj;
+  while (keyPath.length >= 1) {
+    const _key = keyPath.shift();
+
+    if (keyPath.length === 0) {
+      delete _ticker[_key];
+    } else {
+      _ticker = _ticker[_key];
+    }
+  }
+
+  return _obj;
+}
+
 function deepGet(obj: object, key: string): any {
   const keyPath = key.split('.');
 
@@ -113,6 +131,12 @@ export class Json {
   set(key: string, value: any) {
     this.jsonObject = deepSet(this.jsonObject, key, value);
     this.resolvedJson = deepSet(this.resolvedJson, key, buildJsonTree(value));
+    return this;
+  }
+
+  delete(key: string) {
+    this.jsonObject = deepDelete(this.jsonObject, key);
+    this.resolvedJson = deepDelete(this.resolvedJson, key);
     return this;
   }
 

@@ -1,7 +1,7 @@
 {
   "name": "json-wizard",
   "homepage": "https://github.com/AlanQtten/json-wizard.git",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "edit json in code",
   "main": "./dist/main.js",
   "type": "module",
