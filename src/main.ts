@@ -94,7 +94,7 @@ export class Json {
     this.parse(filePath);
   }
 
-  parse(filePath: string) {
+  private parse(filePath: string) {
     try {
       const content = fs.readFileSync(filePath).toString();
       const jsonObject = JSON.parse(content);
@@ -102,7 +102,7 @@ export class Json {
       this.resolvedJson = buildJsonTree(jsonObject);
       this.jsonObject = jsonObject;
     } catch (e) {
-      // console.log(e);
+      console.log(e);
     }
   }
 
@@ -113,6 +113,7 @@ export class Json {
   set(key: string, value: any) {
     this.jsonObject = deepSet(this.jsonObject, key, value);
     this.resolvedJson = deepSet(this.resolvedJson, key, buildJsonTree(value));
+    return this;
   }
 
   write(outputPath?: string) {

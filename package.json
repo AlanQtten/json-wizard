@@ -1,14 +1,15 @@
 {
   "name": "json-wizard",
-  "private": true,
-  "version": "0.0.0",
+  "homepage": "https://github.com/AlanQtten/json-wizard.git",
+  "version": "0.0.5",
+  "description": "edit json in code",
+  "main": "./dist/main.js",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "vite dev",
+    "build": "vite build",
+    "test": "vitest"
   },
-  "supportEngine": [1,2,3],
   "devDependencies": {
     "@types/node": "^20.12.10",
     "eslint": "8.56.0",
