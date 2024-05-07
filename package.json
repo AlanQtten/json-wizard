@@ -1,0 +1,23 @@
+{
+  "name": "json-wizard",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "supportEngine": [1,2,3],
+  "devDependencies": {
+    "@types/node": "^20.12.10",
+    "eslint": "8.56.0",
+    "eslint-config-airbnb": "19",
+    "eslint-config-airbnb-typescript": "18",
+    "eslint-config-prettier": "9",
+    "eslint-plugin-prettier": "5",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vitest": "^1.6.0"
+  }
+}
