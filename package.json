@@ -1,9 +1,10 @@
 {
   "name": "json-wizard",
   "homepage": "https://github.com/AlanQtten/json-wizard.git",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "edit json in code",
   "main": "./dist/main.js",
+  "types": "./types/index.d.ts",
   "type": "module",
   "scripts": {
     "dev": "vite dev",
